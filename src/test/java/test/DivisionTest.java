@@ -23,5 +23,20 @@ public class DivisionTest {
         assertEquals(valorEsperado, valorActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+     @Test
+     public void testDivisionNoExacta() {
+        String valorEsperado = "La división no es exacta. \n"
+                + "Cociente: 2\n"
+                + "Residuo: 3";
+        String valorActual = Division.evaluar(13, 5);
+        assertEquals(valorEsperado, valorActual);
+    }
+    
+    @Test
+    public void testDivisionPorCero() {
+        String valorEsperado = "No se puede dividir por cero.";
+        String valorActual = Division.evaluar(10, 0);
+        assertEquals(valorEsperado, valorActual);
+    }
+    
 }
