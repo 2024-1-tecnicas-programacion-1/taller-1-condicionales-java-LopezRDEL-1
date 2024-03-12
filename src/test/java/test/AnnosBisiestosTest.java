@@ -20,5 +20,24 @@ public class AnnosBisiestosTest {
         assertEquals(valorEsperado, valorActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+   @Test
+    public void test1900() {
+        String valorEsperado = "1900 no es bisiesto";
+        String valorActual = AnnosBisiestos.evaluar(1900);
+        assertEquals(valorEsperado, valorActual);
+    }
+    
+    @Test
+    public void testAnnoNegativo() {
+        String valorEsperado = "El año debe ser positivo";
+        String valorActual = AnnosBisiestos.evaluar(-2024);
+        assertEquals(valorEsperado, valorActual);
+    }
+    
+    @Test
+    public void testAnnoCero() {
+        String valorEsperado = "El año debe ser positivo";
+        String valorActual = AnnosBisiestos.evaluar(0);
+        assertEquals(valorEsperado, valorActual);
+    }
 }
