@@ -20,6 +20,18 @@ public class LetraONumeroTest {
         assertEquals(valorEsperado, valorActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+    @Test
+    public void testEsLetra() {
+        String valorEsperado = "Es letra";
+        String valorActual = LetraONumero.evaluar('A');
+        assertEquals(valorEsperado, valorActual);
+    }
+    
+    @Test
+    public void testCaracterEspecial() {
+        String valorEsperado = "Es caracter especial";
+        String valorActual = LetraONumero.evaluar('?');
+        assertEquals(valorEsperado, valorActual);
+    }
     
 }
